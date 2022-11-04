@@ -1,14 +1,16 @@
 Name:           jacktrip
 Version:        1.6.6
-Release:        %autorelease
+Release:        1
 Summary:        A system for high-quality audio network performance over the Internet
  
 License:        MIT and GPLv3 and LGPLv3
-URL:            https://github.com/%{name}/%{name}
-Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
+URL:            https://github.com/jacktrip/jacktrip/
+Source0:        https://github.com/jacktrip/jacktrip/archive/v%{version}/%{name}-%{version}.tar.gz
  
-BuildRequires:  meson, cmake, gcc-c++
-BuildRequires:  python3-pyyaml, python3-jinja2
+BuildRequires:  meson 
+BuildRequires:  cmake
+BuildRequires:  python-pyyaml
+BuildRequires:  python-jinja2
 BuildRequires:  pkgconfig(jack)
 BuildRequires:  pkgconfig(rtaudio)
 BuildRequires:  help2man
@@ -23,9 +25,8 @@ BuildRequires:  cmake(Qt5Svg)
 BuildRequires:  cmake(Qt5WebSockets)
 BuildRequires:  hicolor-icon-theme
 BuildRequires:  desktop-file-utils
-BuildRequires:  libappstream-glib
+BuildRequires:  pkgconfig(appstream-glib)
 Requires:       hicolor-icon-theme
-Obsoletes:      jacktrip-doc < 1.4.0
  
 %description
 JackTrip is a Linux and Mac OS X-based system used for multi-machine
